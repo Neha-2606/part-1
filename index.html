@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Multiplication Table - Part 1</title>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+ 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--
+    Author: [Neha Gaddala]
+    Contact: [Neha_Gaddala@student.uml.edu]
+    Description: Multiplication table generator for COMP 4610 HW4 Part 1.
+    Uses jQuery Validation Plugin for form validation. Includes reset button to return to starting state.
+    Sources:
+    - jQuery Validation: https://jqueryvalidation.org/
+    - Original CSS and JS from previous assignment
+  -->
+  <h1>Multiplication Table Generator</h1>
+
+  <form id="tableForm">
+    <label>Start Column:
+      <input type="number" id="startCol" name="startCol" required>
+    </label>
+    <label>End Column:
+      <input type="number" id="endCol" name="endCol" required>
+    </label>
+    <label>Start Row:
+      <input type="number" id="startRow" name="startRow" required>
+    </label>
+    <label>End Row:
+      <input type="number" id="endRow" name="endRow" required>
+    </label>
+    <button type="submit">Generate Table</button>
+    <button type="button" id="resetButton">Reset</button>
+  </form>
+
+  <div id="errorMsg"></div>
+  <div id="tableContainer">
+    <table id="multTable"></table>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
